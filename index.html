@@ -13,30 +13,36 @@
         <div id="main_card" class="card">
             <div class="head_card">
                 <h2>To Do List</h2>
-                <div class="head_input_OK"> 
-                    <input type="text" id="input" name="addTODO" class="" onfocusout="pleaseAddTODO()">
-                    <button type="submit" id="submit" class="btn btn-default" onclick="addtodolist()">submit</button>
+                <div class="head_input_OK">
+                    <input type="text" id="newTodo" placeholder="Enter new Todo" required>
+                    <button onclick="addTodo()">Add Todo</button>
+
                 </div>
+                <div class="errortext">
+                    <span id="errorMsg" style="color: red; display: none;">Please enter a Todo.</span>
+                </div>
+
 
             </div>
             <div class="main_card">
                 <div class="head_main_card">
-                    <a href="#">เลือกทั้งหมด</a>
-                    <a href="#">ลบที่เลือก</a>
-                    <a href="#">All-dell</a>
-
+                    <button onclick="checkAllTodos()">เลือกทั้งหมด</button>
+                    <button onclick="uncheckAllTodos()">ยกเลิกที่เลือก</button>
+                    <button onclick="deleteCheckedTodos()">ลบตามที่เลือก</button>
+                    <button onclick="deleteAllTodo()">ลบทั้งหมด</button>
                 </div>
-                
-                    <section class="Show">
-                        <div class="container">
-                            <div id="showlist">
-                
-                            </div>
-                        </div>
-                    </section>
 
-                   
-              
+                <section class="Show">
+                    <div class="container">
+                        <div id="showlist">
+
+                        </div>
+                    </div>
+                </section>
+
+
+
+
             </div>
             <div class="fooerr">
                 <p>To Do List By GKNN</p>
